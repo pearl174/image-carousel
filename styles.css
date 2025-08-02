@@ -37,13 +37,17 @@ img {
 
 .circle {
     border-radius: 50%;
-    background-color: black;
     padding: 10px;
     cursor: pointer;
+    border: 3px solid white;
 }
 
 .circles {
     display: flex;
     justify-content: space-around;
     padding: 10px;
+}
+
+.fill {
+    background-color: black;
 }
