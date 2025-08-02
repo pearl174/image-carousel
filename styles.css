@@ -1,0 +1,49 @@
+.left-arrow, .right-arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    height: 8px;
+    width: 8px;
+    padding: 1px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+.left-arrow {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.right-arrow {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-container {
+    width: 500px;
+    margin: auto;
+    margin-top: 10em;
+    background-color: gray;
+}
+
+img {
+    width: 400px;
+    height: 300px;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: black;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.circles {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
