@@ -37,10 +37,16 @@ const leftArrow = document.querySelector(".left-arrow");
 leftArrow.addEventListener("click", () => {
     index = (index - 1 + n) % n;
     img.src = images[index];
+    circleButtons[index].classList.add("fill");
+    circleButtons[prev].classList.remove("fill");
+    prev = index;
 })
 
 const rightArrow = document.querySelector(".right-arrow");
 rightArrow.addEventListener("click", () => {
     index = (index + 1) % n;
     img.src = images[index];
+    circleButtons[index].classList.add("fill");
+    circleButtons[prev].classList.remove("fill");
+    prev = index;
 })
