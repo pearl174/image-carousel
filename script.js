@@ -13,12 +13,15 @@ imageContainer.append(img);
 let index = 0; 
 let prev = 0;
 
-const clickCircle = (idx) => {
+const changePic = (idx) => {
     index = idx;
     img.src = images[idx];
     circleButtons[idx].classList.add("fill");
     circleButtons[prev].classList.remove("fill");
     prev = idx;
+}
+const clickCircle = (idx) => {
+    changePic(idx);
 }
 
 const n = images.length;
@@ -36,17 +39,11 @@ circleButtons[0].classList.add("fill");
 const leftArrow = document.querySelector(".left-arrow");
 leftArrow.addEventListener("click", () => {
     index = (index - 1 + n) % n;
-    img.src = images[index];
-    circleButtons[index].classList.add("fill");
-    circleButtons[prev].classList.remove("fill");
-    prev = index;
+    changePic(index);
 })
 
 const rightArrow = document.querySelector(".right-arrow");
 rightArrow.addEventListener("click", () => {
     index = (index + 1) % n;
-    img.src = images[index];
-    circleButtons[index].classList.add("fill");
-    circleButtons[prev].classList.remove("fill");
-    prev = index;
+    changePic(index);
 })
