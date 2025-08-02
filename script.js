@@ -19,6 +19,7 @@ const changePic = (idx) => {
     circleButtons[idx].classList.add("fill");
     circleButtons[prev].classList.remove("fill");
     prev = idx;
+    autoSlide();
 }
 const clickCircle = (idx) => {
     changePic(idx);
@@ -47,3 +48,13 @@ rightArrow.addEventListener("click", () => {
     index = (index + 1) % n;
     changePic(index);
 })
+
+let timerId;
+function autoSlide() {
+    clearTimeout(timerId);
+    timerId = setTimeout(() => {
+        index = (index + 1) % n;
+        changePic(index);
+    }, 5000);
+}
+autoSlide();
